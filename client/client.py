@@ -1,15 +1,20 @@
-'''Client transmits and receives data through sockets.
-
-Usage Algorithm:
-
-STEP 1: Create socket and connect to host: ex. 'localhost:xxxx'
-STEP 2: On connection, get input to send
-STEP 3: If message is quit exit client, close socket
-STEP 4: Else, transmit data
-STEP 5: Receive any data
-STEP 6: Display data
-'''
+import socket
 
 
 class Client:
-    pass
+    '''Client transmits and receives data through sockets.
+
+    Usage Algorithm:
+
+    STEP 1: Create socket and connect to host: ex. 'localhost:xxxx'
+    STEP 2: On connection, get input to send
+    STEP 3: If message is quit exit client, close socket
+    STEP 4: Else, transmit data
+    STEP 5: Receive any data
+    STEP 6: Display data
+    '''
+
+    def __init__(self, server_name=socket.gethostname(), server_port=5000, client_socket=socket.socket()):
+        self.server_name = server_name
+        self.server_port = server_port
+        self.client_socket = client_socket
