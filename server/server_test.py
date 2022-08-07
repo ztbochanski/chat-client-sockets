@@ -1,5 +1,6 @@
 import unittest
 from server import Server
+import socket
 
 
 class TestServer(unittest.TestCase):
@@ -24,6 +25,16 @@ class TestServer(unittest.TestCase):
         A server has a port.
         '''
         self.assertIsNotNone(Server().port)
+
+    def test_sethostname(self):
+        '''
+        A hostname is retrieved for the socket.
+        '''
+        server = Server()
+        hostname = socket.gethostname()
+        self.assertNotEqual(server.hostname, hostname)
+        server.sethostname(hostname)
+        self.assertEqual(server.hostname, hostname)
 
 
 if __name__ == '__main__':

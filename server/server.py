@@ -1,4 +1,7 @@
 
+import socket
+
+
 class Server:
     '''Server handles data streams through sockets.
 
@@ -12,6 +15,10 @@ class Server:
 
     '''
 
-    def __init__(self, hostname='localhost', port='5000'):
+    def __init__(self, hostname='localhost', port='5000', socket=None):
         self.hostname = hostname
         self.port = port
+        self.socket = socket
+
+    def sethostname(self, hostname):
+        self.hostname = hostname
