@@ -32,17 +32,7 @@ class TestServer(unittest.TestCase):
         '''
         A server has a socket.
         '''
-        self.assertIsNotNone(Server().socket)
-
-    def test_bind_hostname_to_port(self):
-        '''
-        A server must have a socket where hostname and port are bound together.
-        '''
-        server = Server()
-        try:
-            server.bind_hostname_to_port()
-        except Exception:
-            self.fail('Could not bind host to port.')
+        self.assertIsNotNone(Server().server_socket)
 
 
 if __name__ == '__main__':
