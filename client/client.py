@@ -18,3 +18,9 @@ class Client:
         self.server_name = server_name
         self.server_port = server_port
         self.client_socket = client_socket
+
+    def connect_to_server(self):
+        '''Connect to the server.'''
+        self.client_socket.connect((self.server_name, self.server_port))
+        print('Type /q to quit')
+        print('Enter message to send')
