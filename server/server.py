@@ -12,5 +12,6 @@ class Server:
 
     '''
 
-    def __init__(self):
-        pass
+    def __init__(self, hostname='localhost', port='5000'):
+        self.hostname = hostname
+        self.port = port
