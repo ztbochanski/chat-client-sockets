@@ -32,16 +32,6 @@ class TestServer(unittest.TestCase):
         '''
         self.assertIsNotNone(Server().socket)
 
-    def test_sethostname(self):
-        '''
-        A hostname is retrieved for the socket.
-        '''
-        server = Server()
-        hostname = socket.gethostname()
-        self.assertNotEqual(server.hostname, hostname)
-        server.sethostname(hostname)
-        self.assertEqual(server.hostname, hostname)
-
 
 if __name__ == '__main__':
     unittest.main()
