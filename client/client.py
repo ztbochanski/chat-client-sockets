@@ -9,3 +9,7 @@ STEP 4: Else, transmit data
 STEP 5: Receive any data
 STEP 6: Display data
 '''
+
+
+class Client:
+    pass
