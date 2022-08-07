@@ -15,7 +15,7 @@ class Server:
 
     '''
 
-    def __init__(self, hostname='localhost', port='5000', socket=None):
+    def __init__(self, hostname='localhost', port='5000', socket=socket.socket()):
         self.hostname = hostname
         self.port = port
         self.socket = socket

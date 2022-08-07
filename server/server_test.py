@@ -1,3 +1,4 @@
+from http import server
 import unittest
 from server import Server
 import socket
@@ -26,15 +27,20 @@ class TestServer(unittest.TestCase):
         '''
         self.assertIsNotNone(Server().port)
 
-    def test_sethostname(self):
+    def test_socket(self):
         '''
-        A hostname is retrieved for the socket.
+        A server has a socket.
         '''
-        server = Server()
-        hostname = socket.gethostname()
-        self.assertNotEqual(server.hostname, hostname)
-        server.sethostname(hostname)
-        self.assertEqual(server.hostname, hostname)
+        self.assertIsNotNone(Server().socket)
+    # def test_sethostname(self):
+    #     '''
+    #     A hostname is retrieved for the socket.
+    #     '''
+    #     server = Server()
+    #     hostname = socket.gethostname()
+    #     self.assertNotEqual(server.hostname, hostname)
+    #     server.sethostname(hostname)
+    #     self.assertEqual(server.hostname, hostname)
 
 
 if __name__ == '__main__':
