@@ -34,6 +34,16 @@ class TestServer(unittest.TestCase):
         '''
         self.assertIsNotNone(Server().server_socket)
 
+    def test_listen(self):
+        '''
+        After a server must listen for incoming connections
+        '''
+        server = Server()
+        try:
+            server.listen(2)
+        except Exception:
+            self.fail('Listen failed')
+
 
 if __name__ == '__main__':
     unittest.main()
