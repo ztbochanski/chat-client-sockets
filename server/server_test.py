@@ -22,9 +22,11 @@ class TestServer(unittest.TestCase):
 
     def test_port(self):
         '''
-        A server has a port.
+        A server has an int port.
         '''
-        self.assertIsNotNone(Server().port)
+        server = Server()
+        self.assertEqual(5000, server.port)
+        self.assertIsNotNone(server.port)
 
     def test_socket(self):
         '''
