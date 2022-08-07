@@ -1,6 +1,5 @@
 import unittest
 from server import Server
-import socket
 
 
 class TestServer(unittest.TestCase):
