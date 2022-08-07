@@ -24,3 +24,11 @@ class Client:
         self.client_socket.connect((self.server_name, self.server_port))
         print('Type /q to quit')
         print('Enter message to send')
+
+    def get_input(self):
+        '''Get user input.
+
+        :return: String
+        '''
+        message = input('enter a message >')
+        return message
